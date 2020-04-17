@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.timsimonhughes.transitions.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+
+        <action
+            android:id="@+id/action_menuFragment_to_fragment1"
+            app:destination="@id/Fragment1"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:launchSingleTop="false"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"
+            app:popUpTo="@id/menuFragment"
+            app:popUpToInclusive="false" />
+
+        <action
+            android:id="@+id/action_menuFragment_to_fragment2"
+            app:destination="@id/Fragment2"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:launchSingleTop="false"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit"
+            app:popUpTo="@id/menuFragment"
+            app:popUpToInclusive="false" />
+
+        <action
+            android:id="@+id/action_menuFragment_to_fragment3"
+            app:destination="@id/Fragment3"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:launchSingleTop="false"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit"
+            app:popUpTo="@id/menuFragment"
+            app:popUpToInclusive="false" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/Fragment1"
+        android:name="com.timsimonhughes.transitions.Fragment1"
+        android:label="fragment_transition1"
+        tools:layout="@layout/fragment_1" />
+
+    <fragment
+        android:id="@+id/Fragment2"
+        android:name="com.timsimonhughes.transitions.Fragment2"
+        android:label="fragment_transition2"
+        tools:layout="@layout/fragment_2" />
+
+    <fragment
+        android:id="@+id/Fragment3"
+        android:name="com.timsimonhughes.transitions.Fragment3"
+        android:label="fragment_transition3"
+        tools:layout="@layout/fragment_3" />
+
+</navigation>
