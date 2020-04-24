@@ -5,7 +5,23 @@
     <string name="label_fragment_2">Fragment 2</string>
     <string name="label_fragment_3">Fragment 3</string>
 
-    <string name="label_button_1">Button 1</string>
-    <string name="label_button_2">Button 2</string>
-    <string name="label_button_3">Button 3</string>
+    <string name="label_button_1">Container Transform</string>
+    <string name="label_button_2">Shared Axis</string>
+    <string name="label_button_3">Fade Through</string>
+    <string name="label_button_4">Fade</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_fragment_4">Fragment 4</string>
+    <string name="action_home">Home</string>
+    <string name="action_library">Library</string>
+    <string name="action_radio">Radio</string>
+
+    <string name="container_transform_transition" />
+    <string name="label_action_search">Search</string>
+
+    <!-- Transition Names -->
+    <string name="transition_floating_action_button">Fab Transition</string>
+    <string name="transition_list_to_detail_1">List to Detail 1</string>
+
 </resources>

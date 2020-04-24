@@ -1,14 +1,57 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <!--Material shape attributes-->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Owl.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Owl.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Owl.LargeComponent</item>
+
+        <!--Material type attributes-->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.Owl.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.Owl.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.Owl.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.Owl.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.Owl.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.Owl.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.Owl.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.Owl.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.Owl.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Owl.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Owl.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Owl.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.Owl.Overline</item>
+
+        <!-- Component styles -->
+        <item name="bottomNavigationStyle">@style/AppTheme.BottomNavigationView</item>
+        <item name="toolbarStyle">@style/AppTheme.Toolbar</item>
+        <item name="cardViewStyle">@style/AppTheme.CardView</item>
+        <item name="buttonStyle">@style/AppTheme.Button</item>
     </style>
 
     <style name="AppTheme.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="strokeColor">@color/color_surface_10</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="cardBackgroundColor">@android:color/white</item>
+        <item name="cardCornerRadius">4dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="rippleColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="backgroundColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
         <item name="backgroundColor">@color/colorPrimary</item>
     </style>
 

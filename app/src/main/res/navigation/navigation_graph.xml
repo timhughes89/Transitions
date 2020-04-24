@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/menuFragment"
-        android:name="com.timsimonhughes.transitions.MenuFragment"
+        android:name="com.timsimonhughes.transitions.ui.MenuFragment"
         android:label="fragment_menu"
         tools:layout="@layout/fragment_menu" >
 
         <action
-            android:id="@+id/action_menuFragment_to_fragment1"
-            app:destination="@id/Fragment1"
+            android:id="@+id/action_menuFragment_to_containerTransformFragment"
+            app:destination="@id/ContainerTransformFragment"
             app:enterAnim="@anim/fragment_open_enter"
             app:exitAnim="@anim/fragment_open_exit"
             app:launchSingleTop="false"
@@ -44,24 +44,80 @@
             app:popUpTo="@id/menuFragment"
             app:popUpToInclusive="false" />
 
+        <action
+            android:id="@+id/action_menuFragment_to_fragment4"
+            app:destination="@id/fragment4"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:launchSingleTop="false"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit"
+            app:popUpTo="@id/menuFragment"
+            app:popUpToInclusive="false"/>
+
     </fragment>
 
     <fragment
-        android:id="@+id/Fragment1"
-        android:name="com.timsimonhughes.transitions.Fragment1"
+        android:id="@+id/ContainerTransformFragment"
+        android:name="com.timsimonhughes.transitions.ui.containerTransform.ContainerTransformFragment"
         android:label="fragment_transition1"
-        tools:layout="@layout/fragment_1" />
+        tools:layout="@layout/fragment_container_transform" >
+
+        <action
+            android:id="@+id/action_ContainerTransformFragment_to_containerTransformDetail1"
+            app:destination="@id/containerTransformDetailList" />
+        <action
+            android:id="@+id/action_ContainerTransformFragment_to_containterTransformDetailFab"
+            app:destination="@id/containerTransformDetailFab" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/Fragment2"
-        android:name="com.timsimonhughes.transitions.Fragment2"
+        android:name="com.timsimonhughes.transitions.ui.Fragment2"
         android:label="fragment_transition2"
         tools:layout="@layout/fragment_2" />
 
     <fragment
         android:id="@+id/Fragment3"
-        android:name="com.timsimonhughes.transitions.Fragment3"
+        android:name="com.timsimonhughes.transitions.ui.Fragment3"
         android:label="fragment_transition3"
         tools:layout="@layout/fragment_3" />
+    <fragment
+        android:id="@+id/fragment4"
+        android:name="com.timsimonhughes.transitions.ui.Fragment4"
+        android:label="fragment_4"
+        tools:layout="@layout/fragment_4" />
+
+    <fragment
+        android:id="@+id/containerTransformDetailList"
+        android:name="com.timsimonhughes.transitions.ui.containerTransform.ContainerTransformDetailList"
+        android:label="fragment_container_transform_detail_list"
+        tools:layout="@layout/fragment_container_transform_detail_list" >
+
+        <argument
+            android:name="transitionName"
+            app:argType="string"
+            android:defaultValue=" " />
+
+        <argument
+            android:name="imageUrl"
+            app:argType="string"
+            android:defaultValue=" "/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/containerTransformDetailFab"
+        android:name="com.timsimonhughes.transitions.ui.containerTransform.ContainerTransformDetailFab"
+        android:label="fragment_container_transform_detail_fab"
+        tools:layout="@layout/fragment_container_transform_detail_fab">
+
+        <argument
+            android:name="containerTransformFabTransition"
+            app:argType="string"
+            android:defaultValue=" "/>
+
+    </fragment>
 
 </navigation>

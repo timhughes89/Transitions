@@ -4,15 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment1">
+    android:background="@android:color/white"
+    android:transitionName="@string/transition_floating_action_button"
+    tools:context=".ui.containerTransform.ContainerTransformDetailFab">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/fab_detail_toolbar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/label_fragment_1"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/menu_container_transform_fab"
+        app:navigationIcon="@drawable/ic_arrow_back" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
